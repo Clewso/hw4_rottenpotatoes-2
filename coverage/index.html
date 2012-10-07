@@ -21,20 +21,20 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-10-06T15:56:29-07:00">2012-10-06T15:56:29-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-10-06T17:19:01-07:00">2012-10-06T17:19:01-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">70.69%</span>)
+    (<span class="red">71.67%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>58</b> relevant lines. 
-    <span class="green"><b>41</b> lines covered</span> and
+    <b>60</b> relevant lines. 
+    <span class="green"><b>43</b> lines covered</span> and
     <span class="red"><b>17</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -61,10 +61,10 @@
       
       <tr>
         <td><a href="#28b749858f701b25cc98d04a0a708a4bf06a2ecc" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="red">65.96 %</td>
-        <td>76</td>
-        <td>47</td>
-        <td>31</td>
+        <td class="red">67.35 %</td>
+        <td>78</td>
+        <td>49</td>
+        <td>33</td>
         <td>16</td>
       </tr>
       
@@ -103,13 +103,13 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     Controllers
-    (<span class="red">67.35%</span>)
+    (<span class="red">68.63%</span>)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
-    <b>49</b> relevant lines. 
-    <span class="green"><b>33</b> lines covered</span> and
+    <b>51</b> relevant lines. 
+    <span class="green"><b>35</b> lines covered</span> and
     <span class="red"><b>16</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -136,10 +136,10 @@
       
       <tr>
         <td><a href="#28b749858f701b25cc98d04a0a708a4bf06a2ecc" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="red">65.96 %</td>
-        <td>76</td>
-        <td>47</td>
-        <td>31</td>
+        <td class="red">67.35 %</td>
+        <td>78</td>
+        <td>49</td>
+        <td>33</td>
         <td>16</td>
       </tr>
       
@@ -366,7 +366,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/controllers/movies_controller.rb</h3>
-        <h4><span class="red">65.96 %</span> covered</h4>
+        <h4><span class="red">67.35 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -1306,7 +1306,7 @@
         <pre>72</pre>
       </td>
       <td>
-        <pre>    if @sim_dir.empty?</pre>
+        <pre>    if @sim_dir.blank?</pre>
       </td>
       <td class="hits">
         2
@@ -1319,6 +1319,32 @@
         <pre>73</pre>
       </td>
       <td>
+        <pre>      message = &quot;'#{title}' has no director info&quot;</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>74</pre>
+      </td>
+      <td>
+        <pre>      flash[:notice] = message</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>75</pre>
+      </td>
+      <td>
         <pre>      redirect_to movies_path</pre>
       </td>
       <td class="hits">
@@ -1329,7 +1355,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>74</pre>
+        <pre>76</pre>
       </td>
       <td>
         <pre>    end</pre>
@@ -1342,7 +1368,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>75</pre>
+        <pre>77</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -1355,7 +1381,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>76</pre>
+        <pre>78</pre>
       </td>
       <td>
         <pre>end</pre>
@@ -1603,7 +1629,7 @@
         <pre>6</pre>
       </td>
       <td>
-        <pre>    Movie.find(:all,:conditions =&gt;&quot;title != '#{title}' AND director = '#{dir}'&quot;)</pre>
+        <pre>    Movie.find(:all, :conditions =&gt; &quot;title != '#{title}' AND director = '#{dir}'&quot;)</pre>
       </td>
       <td class="hits">
         2

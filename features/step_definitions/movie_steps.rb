@@ -41,3 +41,31 @@ Then /^(?:|I )should not see "(.*)"/ do |text|
     assert page.has_no_content?(text)
   end
 end
+
+Then /I should be on the Similar Movies page for "(.*)"/ do |movie_name|
+  current_path = URI.parse(current_url).path
+  if current_path.respond_to? :should
+    movie = Movie.find(:first, :conditions => {:title => movie_name})
+    page_path = same_dir_path(movie.id)
+    current_path.should == page_path
+  else
+    assert_equal page_path, current_path
+  end
+end
+
+Then /^(?:|I )should be on the home page/ do
+  current_path = URI.parse(current_url).path
+  if current_path.respond_to? :should
+    current_path.should == movies_path
+  else
+    assert_equal movies_path, current_path
+  end
+end
+
+And /I should see "(.*)"/ do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end

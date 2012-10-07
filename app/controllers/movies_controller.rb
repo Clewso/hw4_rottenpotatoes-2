@@ -69,7 +69,9 @@ class MoviesController < ApplicationController
     dir    = @movie.director
     title  = @movie.title
     @sim_dir = Movie.find_sim_dir(title, dir)
-    if @sim_dir.empty?
+    if @sim_dir.blank?
+      message = "'#{title}' has no director info"
+      flash[:notice] = message
       redirect_to movies_path
     end
   end
